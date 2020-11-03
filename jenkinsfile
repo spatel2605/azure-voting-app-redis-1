@@ -21,10 +21,10 @@ pipeline {
          }
       stage('Start test app') {
          steps {
-           # Start app line missing!
-           #powershell label: '', script: '''docker-compose up -d
-           ./scripts/test_container.ps1
-           '''
+          powershell label: '', script: '''
+          # Start app line missing!
+          ./scripts/test_container.ps1
+          '''
          }
          post {
             success {
